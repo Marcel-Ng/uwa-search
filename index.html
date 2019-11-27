@@ -2,9 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geo Search</title>
   <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="styles/search-section.css">
 
 </head>
 <body>
@@ -13,43 +16,117 @@
 
   <header>
     <h2><a href="#"><i class="ion-plane"></i> Geo-Search</a></h2>
+
+    <nav> <ul> <li><a href="#" class="btn" id="butAdd">Temprature in: °F</a></li></ul> </nav>
   </header>
 
-  <main class="cover">
+  <main class="main">
 
     <!-- THIS IS THE SECTION THAT CONTAINS THE FORM AND THE PAGE TITLE, THE MOST ACTIVE AND DORMINATE PART OF THE PAGE -->
-    <section>
+    <section class="form-section">
       <!-- We would add an active-search class here when the form is active to it behave accordingly also to the form as well -->
-      <h1>Discover Places.</h1>
+      <h1 class="form-sec-header">Discover Places.</h1>
       <form  class="flex-form">
         <label for="from">
           <i class="ion-location"></i>
         </label>
-        <input type="search" placeholder="Where do you want to go?">
-        <input type="submit" value="Search">
+        <input class="search-input" type="search" placeholder="Where do you want to go?">
+        <button type="submit"></button>
+        <!-- <input type="submit" value="Search"> -->
       </form>
     </section>
 
     <!-- THIS IS THE SECTION RESPONSIPLE FOR DISPLAYING SEARCH RESULTS -->
-    <section>
+    <section class="search-output-section">
       <!-- This is the node that will be used to create other nodes in this search result -->
-      <article>
-        
-      </article>
-    </section>
 
+      <section class="search-result" >
+        <article class="card cardTemplate weather-forecast" >
+          <!-- hidden files to be made unhidden by js -->
+          <div class="city-key" hidden></div>
+          <div class="card-last-updated" hidden></div>
+          <!-- hidden files to be made unhidden by js -->
+          <div class="location">Enugu, Nigeria</div>
+          <div class="date"></div>
+          <div class="description"> </div>
+      
+          <div class="current">
+            <div class="visual">
+              <div class="icon rain"></div>
+              <div class="temperature">
+                <span class="value">60</span><span class="scale">°F</span>
+              </div>
+            </div>
+          
+            <div class="description">
+              <div class="wind">
+                <span class="value">34</span>
+                <span class="scale">mph</span>
+                <span class="direction">56</span>°
+              </div>
+            <div class="humidity">30</div>
+            <div class="precipitation">30</div>
+            <div class="timezone">30</div>
+          </div>
 
-    <aside>
+          <div class="map-thumbnail">
+            
+          </div>
+
+          <div class="land-mark">
+            <img src="../bg-image/planet.jpg" >
+          </div>
+          <div class="land-mark">
+            <img src="../bg-image/planet.jpg">
+          </div>
+          <div class="land-mark">
+            <img src="../bg-image/planet.jpg">
+          </div>
+      </div>  
+    </article>
+  </section>
+  
+  <div class="loader">
+    <svg viewBox="0 0 32 32" width="32" height="32">
+      <circle id="spinner" cx="16" cy="16" r="14" fill="none"></circle>
+    </svg>
+  </div>
+
+</section>
+
+</main>
+
+   <aside>
       <div id="info-display">
         <span>
           Informations will be displaying here.
         </span>
       </div>
     </aside>
-  </main>
+
+  <aside class="dialog-container">
+    <div class="dialog">
+      <div class="dialog-title">Change Temprature Scale</div>
+      <div class="dialog-body">
+        <div>
+            <input type="radio" name="tempScale" value="fahrenheit" id="fahrenheit-scale">
+            <label for="fahrenheit-scale">Fahrenheit</label>
+        </div>
+        <div>
+          <input type="radio" name="tempScale" value="celsius" id="celsius-scale">
+          <label for="celsius-scale">Celsius</label>
+        </div>
+      </div>
+      <div class="dialog-buttons">
+        <button id="butAddCity" class="btn">Ok</button>
+        <button id="butAddCancel" class="btn">Cancel</button>
+      </div>
+    </div>
+  </aside>
 
 </div>
 <!-- partial -->
   
+<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
