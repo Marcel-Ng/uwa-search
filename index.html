@@ -6,8 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geo Search</title>
   <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
+  <link rel="stylesheet" href="styles/basic-style.css">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" type="text/css" href="styles/search-section.css">
+
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Geo Search">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#d73851">
 
 </head>
 <body>
@@ -41,7 +50,7 @@
       <!-- This is the node that will be used to create other nodes in this search result -->
 
       <section class="search-result" >
-        <article class="card cardTemplate weather-forecast" >
+        <article class="card cardTemplate places-card" >
           <!-- hidden files to be made unhidden by js -->
           <div class="city-key" hidden></div>
           <div class="card-last-updated" hidden></div>
@@ -126,7 +135,7 @@
 
 </div>
 <!-- partial -->
-  
-<script type="text/javascript" src="js/script.js"></script>
+<script src="js/util.js" async></script>
+<script src="js/script.js"></script>
 </body>
 </html>
