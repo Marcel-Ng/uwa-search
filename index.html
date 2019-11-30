@@ -35,7 +35,7 @@
     <section class="form-section">
       <!-- We would add an active-search class here when the form is active to it behave accordingly also to the form as well -->
       <h1 class="form-sec-header">Discover Places.</h1>
-      <form  class="flex-form">
+      <form  class="flex-form" id="search-form">
         <label for="from">
           <i class="ion-location"></i>
         </label>
@@ -50,7 +50,7 @@
       <!-- This is the node that will be used to create other nodes in this search result -->
 
       <section class="search-result" >
-        <article class="card cardTemplate places-card" >
+        <article class="card cardTemplate places-card" hidden>
           <!-- hidden files to be made unhidden by js -->
           <div class="city-key" hidden></div>
           <div class="card-last-updated" hidden></div>
@@ -78,9 +78,9 @@
             <div class="timezone">30</div>
           </div>
 
-          <div class="map-thumbnail">
+          <iframe src="" class="map-thumbnail">
             
-          </div>
+          </iframe>
 
           <div class="land-mark">
             <img src="../bg-image/planet.jpg" >

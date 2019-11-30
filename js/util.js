@@ -22,8 +22,8 @@ class DomSelector{
 }
 
 (function(){
-//instantiating the class now
-const _ = new DomSelector;
+	//instantiating the class now
+	const _ = new DomSelector;
 
 // Initializing the service workers
 // if ('serviceWorker' in navigator) {
@@ -31,4 +31,4 @@ const _ = new DomSelector;
 //              .register('./service-worker.js')
 //              .then(function() { console.log('Service Worker Registered'); });
 //   }
-})();
+}());
